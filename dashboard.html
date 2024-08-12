@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>EV Dashboard</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .dashboard {
+        width: 80%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "battery routes alerts"
+          "carplay spotify spotify";
+        grid-template-columns: 2fr 2fr 1fr;
+        grid-gap: 20px;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        border-radius: 8px;
+      }
+
+      .battery-status {
+        grid-area: battery;
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .battery-status h2 {
+        margin-top: 0;
+      }
+
+      .traffic-routes {
+        grid-area: routes;
+        background-color: #2196f3;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .traffic-routes h2 {
+        margin-top: 0;
+      }
+
+      .alerts {
+        grid-area: alerts;
+        background-color: #ff5722;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .alerts h2 {
+        margin-top: 0;
+      }
+
+      .carplay {
+        grid-area: carplay;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carplay img {
+        max-width: 150px;
+      }
+
+      .spotify {
+        grid-area: spotify;
+        background-color: #1db954;
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .spotify img {
+        max-width: 150px;
+      }
+
+      table {
+        width: 100%;
+        margin-top: 10px;
+        color: white;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <div class="header">EV Management Dashboard Prototype</div>
+
+      <!-- Battery Status Section -->
+      <div class="battery-status">
+        <h2>Battery Status</h2>
+        <table>
+          <tr>
+            <th>Parameter</th>
+            <th>Value</th>
+          </tr>
+          <tr>
+            <td>State of Charge (SoC)</td>
+            <td>85%</td>
+          </tr>
+          <tr>
+            <td>State of Health (SoH)</td>
+            <td>92%</td>
+          </tr>
+          <tr>
+            <td>Battery Temperature</td>
+            <td>27°C</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Traffic Routes Section -->
+      <div class="traffic-routes">
+        <h2>Optimal Traffic Routes</h2>
+        <table>
+          <tr>
+            <th>Route</th>
+            <th>Estimated Time</th>
+            <th>Energy Consumption</th>
+          </tr>
+          <tr>
+            <td>Route 1</td>
+            <td>30 min</td>
+            <td>15 kWh</td>
+          </tr>
+          <tr>
+            <td>Route 2</td>
+            <td>28 min</td>
+            <td>14 kWh</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Alerts Section -->
+      <div class="alerts">
+        <h2>Alerts</h2>
+        <p>No alerts at this time.</p>
+      </div>
+
+      <!-- Apple CarPlay Section -->
+      <div class="carplay">
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1679/1679863.png"
+          alt="Apple CarPlay Logo"
+        />Apple CarPlay
+      </div>
+
+      <!-- Spotify Section -->
+      <div class="spotify">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/640px-Spotify_logo_with_text.svg.png"
+          alt="Spotify Logo"
+        />
+      </div>
+    </div>
+  </body>
+</html>
